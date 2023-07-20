@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleDamage : MonoBehaviour
 {
-    public Health Healthhealth;
+    public PlayerHealth Healthhealth;
     public int damage = 2;
     // Start is called before the first frame update
     void Start()
