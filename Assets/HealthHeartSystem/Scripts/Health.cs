@@ -12,6 +12,11 @@ public class Health : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    void Start()
+    {
+        health = numOfHearts;
+    }
+
     void Update()
     {
 
@@ -40,6 +45,15 @@ public class Health : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
+        }
+    }
+
+    public void TakeDamage(int amount)
+    {
+        health -= amount;
+        if(health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
