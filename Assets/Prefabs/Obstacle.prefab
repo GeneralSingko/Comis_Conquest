@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 3674224446566503691}
   - component: {fileID: 450376580707291039}
   - component: {fileID: -3553197029080125072}
+  - component: {fileID: -3693694155416169986}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -216,3 +217,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &-3693694155416169986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586026943388329380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bee9e33314904c45b8da1269c4673ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Healthhealth: {fileID: 0}
+  damage: 1

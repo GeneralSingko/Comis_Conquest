@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObstacleDamage : MonoBehaviour
 {
     public Health Healthhealth;
+    public int damage = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class ObstacleDamage : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player") {
-            Healthhealth.TakeDamage(1);
+            Healthhealth.TakeDamage(damage);
         }
     }
 }
