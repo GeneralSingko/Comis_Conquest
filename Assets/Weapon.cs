@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform firePoint;
+    public GameObject bulletPrefab;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+
+        // Optionally, you can add velocity to the projectile (if it's a Rigidbody).
+        Rigidbody2D rb = bulletPrefab.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = firePoint.up * 20f;
+        }
     }
 }
