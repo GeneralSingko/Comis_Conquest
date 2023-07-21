@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,11 @@ public class Health : MonoBehaviour
 
     void Update()
     {
+        Hearts();
+    }
 
+    public void Hearts()
+    {
         if (health > numOfHearts)
         {
             health = numOfHearts;
@@ -42,5 +47,4 @@ public class Health : MonoBehaviour
             }
         }
     }
-
 }
